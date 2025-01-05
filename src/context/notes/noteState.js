@@ -3,7 +3,7 @@ import NoteContext from './noteContext'
 
 const NoteState = (props) => {
 
-    const host = "http://localhost:8080"
+    const host = "https://cloudquill.vercel.app"
     const [notes,setNotes] = useState([])
 
 
