@@ -12,17 +12,19 @@ const JSWT_SECRET = "R@#i|i$@G00dBoy";
 // Create a user using POST at /api/auth/createUser
 router.post("/createuser", check("name").isLength({ min: 3 }).withMessage('Name nust be atleast 3 character long'), check("email").isEmail().withMessage('Enter valid email'), check("password").isLength({ min: 6 }).withMessage('Password must be atleast 6 characters long'), async (req, res) => {
 
+    let success = false
+
     // if there are errors return bad request and error
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        res.status(400).json({ errors: errors.array() });
+        res.status(400).json({ success, errors: errors.array() });
     }
     else {
         // check for unique email
         try {
             let user = await User.findOne({ email: req.body.email })
             if (user) {
-                return res.status(400).json({ error: "Email already in use" })
+                return res.status(400).json({success, error: "Email already in use" })
             }
             const salt = await bcrypt.genSalt(10)
             const secPassword = await bcrypt.hash(req.body.password, salt)
@@ -39,11 +41,11 @@ router.post("/createuser", check("name").isLength({ min: 3 }).withMessage('Name 
             }
             const authToken = jwt.sign(data, JSWT_SECRET)
 
-            res.json({ authToken })
+            res.json({success : true, authToken })
         }
         catch (error) {
             console.error(error.message)
-            res.status(500).json({ error: "Some Error Occured" })
+            res.status(500).json({success, error: "Some Error Occured" })
         }
     }
 
@@ -55,9 +57,11 @@ router.post("/createuser", check("name").isLength({ min: 3 }).withMessage('Name 
 // verify a user using POST at api/auth/login . No Login
 router.post("/login", check("email").isEmail().withMessage('Enter valid email'), check("password").exists().withMessage('Password cannot be Blank'), async (req, res) => {
 
+    let success = false
+
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        res.status(400).json({ errors: errors.array() });
+        res.status(400).json({ success ,  errors: errors.array() });
     }
 
     const { email, password } = req.body
@@ -65,7 +69,7 @@ router.post("/login", check("email").isEmail().withMessage('Enter valid email'),
         let user = await User.findOne({ email })
         const passwordCompare = await bcrypt.compare(password, user.password)
         if (!user || !passwordCompare) {
-            return res.status(400).json("Invalid Credentials")
+            return res.status(400).json({success , errors : "Inavlid Credentials"})
         }
 
         const data = {
@@ -74,11 +78,11 @@ router.post("/login", check("email").isEmail().withMessage('Enter valid email'),
             }
         }
         const authToken = jwt.sign(data, JSWT_SECRET)
-        res.json({ authToken })
+        res.json({ success : true , authToken })
     }
     catch (error) {
         console.error(error.message)
-        res.status(500).json({ error: "Some Error Occured" })
+        res.status(500).json({ success, error: "Some Error Occured" })
     }
 
 })

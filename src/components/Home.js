@@ -1,25 +1,36 @@
 import React, { useContext, useEffect, useState, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import NoteContext from '../context/notes/noteContext'
 import NoteItem from './NoteItem'
+import createnote from '../images/createnote.png'
 
-export default function Home() {
+export default function Home(props) {
 
   const ref = new useRef(null)
 
   const context = useContext(NoteContext)
   const { notes, getNotes, editNote } = context
 
+  const navigate = new useNavigate()
+
   const [note, setNote] = useState({ id: "", title: "", description: "", tag: "" })
 
 
   useEffect(() => {
-    getNotes()
+    if(localStorage.getItem('token')){
+      getNotes()
+      console.log(notes.length)
+    }
+    else{
+      navigate("/login")
+    }
+    
   })
 
   const handleClick = (e) => {
     editNote(note)
     ref.current.click()
+    props.showAlert("Note edited successfuly", "success")
   }
 
   const handleChange = (e) => {
@@ -29,7 +40,7 @@ export default function Home() {
 
   return (
     <>
-      <button ref={ref} type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style={{display:"none"}}></button>
+      <button ref={ref} type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style={{ display: "none" }}></button>
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style={{ overflowX: "hidden" }}>
         <div class="modal-dialog">
           <div class="modal-content">
@@ -53,7 +64,7 @@ export default function Home() {
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button disabled={note.title.length<5 || note.description.length<5} type="button" class="btn btn-primary" onClick={handleClick}>Update Note</button>
+              <button disabled={note.title.length < 5 || note.description.length < 5} type="button" class="btn btn-primary" onClick={handleClick}>Update Note</button>
             </div>
           </div>
         </div>
@@ -67,10 +78,18 @@ export default function Home() {
         </div>}
         {notes.length !== 0 && <div className="row my-5">
           {notes.map((note) => {
-            return <NoteItem key={notes._id} note={note} setNote={setNote} />
+            return <NoteItem showAlert={props.showAlert} key={notes._id} note={note} setNote={setNote} />
           })}
+          <Link className="col col-md-3 align-self-center" to="/createnote" style={{ minHeight: "280px" , minWidth:"180px"}}>
+            <div className=" create-note  card  d-flex justify-content-center align-items-center" style={{ height: "280px" }}>
+                <img src={createnote} alt="" style={{width : "50px", height: "50px"}}/>
+                <p className='my-2' style={{textDecoration:"none"}}>Create a Note</p>
+            </div>  
+          </Link>
         </div>}
       </div >
+
+
     </>
   )
 }

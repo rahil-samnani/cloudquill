@@ -9,7 +9,6 @@ export default function Footer() {
         <footer>
             <div className="container footer">
                 <div className="row mb-4 align-items-center">
-                    {/* Left side - Logo */}
                     <div className="col-md-3 mb-3 mb-md-0">
                         <a
                             href="/"
@@ -22,10 +21,9 @@ export default function Footer() {
                                 height={40}
                                 className="me-2"
                             />
-                            <span className="fs-4 text-dark">CloudQuill</span>
+                            <span className="fs-4" style={{color:"#3DC4E2"}}>CloudQuill</span>
                         </a>
                     </div>
-                    {/* Center - Navigation */}
                     <div className="col-md-6 mb-3 mb-md-0">
                         <ul className="nav justify-content-center">
                             <li className="nav-item">
@@ -50,14 +48,12 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                    {/* Right side - About text */}
                     <div className="col-md-3 py-4">
                         <h5 className="text-dark">About Us</h5>
                         <p className="text-muted footer-about">
                             CloudQuill lets you store your notes easily in a cloud, so you can access it from anywhere around the world at ay time.
                         </p>
                     </div>
-                    {/* Social Media Icons */}
                     <div className="row mb-4">
                         <div className="col-12 text-center">
                             <a href="/" className="text-muted me-3">
@@ -74,9 +70,7 @@ export default function Footer() {
                             </a>
                         </div>
                     </div>
-                    {/* Horizontal line */}
                     <hr className="my-4" />
-                    {/* Copyright text */}
                     <div className="row">
                         <div className="col-12 text-center">
                             <p className="text-muted">© CloudQuill All rights reserved.</p>

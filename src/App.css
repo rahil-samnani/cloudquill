@@ -74,8 +74,20 @@ i{
 }
 
 .left-form {
+  margin-top: 42px;
   width: 40%;
   display: block;
+}
+
+@media screen and (max-width : 787px) {
+  .form{
+    height: 420px;
+    flex-wrap: wrap;
+    gap: 33px;
+  }
+  .left-form{
+    width: 100%;
+  }
 }
 
 .input {
@@ -128,4 +140,101 @@ i{
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   padding: 20px;
+}
+
+/* LOGIN PAGE CSS */
+.Lflex-r,
+.Lflex-c {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Lflex-c {
+  flex-direction: column;
+}
+.Lflex-r {
+  flex-direction: row;
+}
+
+.Llogin-text {
+  background-color: #f6f6f6;
+  max-width: 400px;
+  min-height: 500px;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.Llogo {
+  margin-bottom: 20px;
+}
+.Llogo span,
+.Llogo span i {
+  font-size: 25px;
+  color: #3DC4E2;
+}
+
+.Llogin-text h1 {
+  font-size: 25px;
+}
+.Llogin-text p {
+  font-size: 15px;
+  color: #000000b2;
+}
+
+.Lform {
+  align-items: flex-start !important;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.Linput-box {
+  margin: 10px 0px;
+  width: 100%;
+}
+.Llabel {
+  font-size: 15px;
+  color: black;
+  margin-bottom: 3px;
+}
+.Linput {
+  background-color: #f6f6f6;
+  padding: 0px 5px;
+  border: 2px solid rgba(216, 216, 216, 1);
+  border-radius: 10px;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+.LLinput {
+  border: none;
+  outline: none;
+  padding: 10px 5px;
+  background-color: #f6f6f6;
+  flex: 1;
+}
+.Linput i {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+.btns {
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 10px 15px;
+  background: linear-gradient(122.33deg, #68bed1 30.62%, #1e94e9 100%);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s linear;
+}
+
+.btns:hover {
+  transform: translateY(-2px);
+}
+.Lextra-line {
+  font-size: 15px;
+  font-weight: 600;
+}
+.Lextra-line a {
+  color: #0095b6;
 }
