@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb://127.0.0.1:27017/CloudQuill';
+const mongoURI = 'mongodb+srv://rahilsamnani456:fIFh3BC0DOGUfa4N@cloudquill.5edu1.mongodb.net/';
 
 const connectToMongo = () => {
     mongoose.connect(mongoURI).then(() => {

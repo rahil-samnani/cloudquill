@@ -88,8 +88,6 @@ export default function Home(props) {
           </Link>
         </div>}
       </div >
-
-
     </>
   )
 }

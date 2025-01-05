@@ -37,13 +37,9 @@ export default function Navbar() {
                             </li>
                             
                         </ul>
-                        {!localStorage.getItem('token') && <form className="d-flex mx-4">
-                            <Link to="/login"> <button className="btn text-light mx-2" style={{backgroundColor:"#3DC4E2"}}>Login</button></Link>
-                            <Link to="/signup"> <button className="btn text-light mx-2" style={{backgroundColor:"#3DC4E2"}}>Sign Up</button></Link>
-                        </form>}
-                        {localStorage.getItem('token') && <form className="d-flex mx-4">
+                        <form className="d-flex mx-4">
                             <Link to="/login"> <button className="btn btn-outline-danger" onClick={logout}>Logout</button></Link>
-                        </form>}
+                        </form>
                     </div>
                 </div>
             </nav>
