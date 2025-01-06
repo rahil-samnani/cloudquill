@@ -9,7 +9,7 @@ const port = 8080
 
 app.use(express.json())
 app.use(cors({
- origin : ["https://deploy-mern-1whq.vercel.app"],
+ origin : ["https://cloudquill.vercel.app"],
  methods : ["POST","GET"],
  credentials : true
 }))
