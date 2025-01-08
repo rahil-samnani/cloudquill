@@ -18,7 +18,7 @@ export default function NoteItem(props) {
 
     return (
         <div className="col col-md-3 my-3">
-            <div className="card" style={{ minHeight: "280px" , minWidth:"180px"}}>
+            <div className="card" style={{ minHeight: "280px" , minWidth:"313px"}}>
                 <div class="position-absolute badge rounded-pill" style={{top:"-10px",left:"5px",backgroundColor:"#3DC4E2"}}>
                     <p style={{fontSize : "13px", margin:"0px"}}>{note.tag}</p>
                     <span class="visually-hidden">Tag</span>
