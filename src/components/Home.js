@@ -17,7 +17,7 @@ export default function Home(props) {
 
 
   useEffect(() => {
-    if(localStorage.getItem('token')){
+    if(localStorage.getItem('token') !== 'null'){
       getNotes()
     }
     else{
