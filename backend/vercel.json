@@ -5,32 +5,12 @@
     ],
     "routes": [
       {
-        "src": "/api/auth/login",
+        "src": "/api/auth/(.*)",
         "dest": "/routes/auth.js"
       },
       {
-        "src": "/api/auth/createuser",
+        "src": "/api/notes/(.*)",
         "dest": "/routes/auth.js"
-      },
-      {
-        "src": "/api/auth/getuser",
-        "dest": "/routes/auth.js"
-      },
-      {
-        "src": "/api/notes/fetchallnotes",
-        "dest": "/routes/notes.js"
-      },
-      {
-        "src": "/api/notes/deletenote/(.*)",
-        "dest": "/routes/notes.js"
-      },
-      {
-        "src": "/api/notes/updatenote/(.*)",
-        "dest": "/routes/notes.js"
-      },
-      {
-        "src": "/api/notes/addnote",
-        "dest": "/routes/notes.js"
       }
     ]
   }
