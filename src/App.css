@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
 body::-webkit-scrollbar {
   display: none;
 } 
+
 
 * {
   margin: 0;
@@ -9,7 +12,8 @@ body::-webkit-scrollbar {
 }
 
 body {
-
+  font-family: Pangolin ;
+  font-size: large;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;

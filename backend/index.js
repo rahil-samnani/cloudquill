@@ -8,11 +8,14 @@ const app = express()
 const port = 8080
 
 app.use(express.json())
-app.use(cors({
- origin : ["https://deploy-mern-1whq.vercel.app"],
- methods : ["POST","GET"],
- credentials : true
-}))
+const corsOptions = {
+    origin: 'https://cloudquill.vercel.app', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    allowedHeaders: ['Content-Type', 'auth-token'],
+    credentials: true
+  };
+app.use(cors(corsOptions));
+
 
 //Available Routes
 app.use('/api/auth' , require("./routes/auth"))
