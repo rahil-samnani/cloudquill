@@ -10,7 +10,7 @@
       },
       {
         "src": "/api/notes/(.*)",
-        "dest": "/routes/auth.js"
+        "dest": "/routes/notes.js"
       }
     ]
   }
