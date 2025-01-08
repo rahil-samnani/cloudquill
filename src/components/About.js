@@ -56,7 +56,7 @@ export default function About() {
                     <i className="fab fa-angellist"></i>
                   </div>
                   <h5 className="text-dark text-capitalize mt-3 font-weight-bold">Increases Productivity</h5>
-                  <p className="edu_desc mb-0 mt-3 text-muted">As a cloud-based app, CloudQuill ensures your notes are securely stored and accessible from any location. </p>
+                  <p className="edu_desc mb-0 mt-3 text-muted">CloudQuill increases productivity by streamlining note-taking and ensuring seamless access across devices.</p>
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function About() {
                     <i className="fas fa-paper-plane"></i>
                   </div>
                   <h5 className="text-dark text-capitalize mt-3 font-weight-bold">Cloud Based </h5>
-                  <p className="edu_desc mb-0 mt-3 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                  <p className="edu_desc mb-0 mt-3 text-muted">As a cloud-based app, CloudQuill ensures your notes are securely stored and accessible from any location. </p>
                 </div>
               </div>
             </div>
