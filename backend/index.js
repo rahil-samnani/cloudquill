@@ -9,7 +9,7 @@ const port = 8080
 
 app.use(express.json())
 const corsOptions = {
-    origin: 'https://cloudquill.vercel.app', 
+    origin: 'https://cloudquill-siwg.vercel.app', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
     allowedHeaders: ['Content-Type', 'auth-token'],
     credentials: true
