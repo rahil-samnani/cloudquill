@@ -8,7 +8,7 @@ export default function Navbar() {
     const navigate = useNavigate()
 
     const logout = () => {
-        localStorage.setItem('token', null)
+        localStorage.setItem('token', 'null')
         navigate('/login')
     }
 
