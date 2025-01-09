@@ -9,8 +9,7 @@ export default function Signup(props) {
     const navigate = useNavigate()
 
     const context = useContext(NoteContext)
-    //const { mode } = context
-    const mode = 'dark'
+    const { mode } = context
 
     const [credential, setCredential] = useState({ name: "", email: "", password: "" })
 
