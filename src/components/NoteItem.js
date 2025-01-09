@@ -27,7 +27,7 @@ export default function NoteItem(props) {
                         <div className='d-flex flex-wrap'>
                             <h5 className={`card-title text-${mode === 'light' ? 'dark' : 'light'}`} style={{ width: "79%", paddingRight: "10px" }}>{note.title}</h5>
                             <div className='align-self-flex-end ' style={{ width: "50px" }}>
-                                <i className="fa-solid fa-trash" onClick={handleDelete}></i>
+                                <i style={{color : `${mode === 'light' ? 'black' : '#3DC4E2'}`}} className="fa-solid fa-trash" onClick={handleDelete}></i>
                                 <i className="fa-solid fa-pen mx-2" onClick={handleEdit} data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
                             </div>
                         </div>
