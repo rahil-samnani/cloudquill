@@ -5,16 +5,10 @@ var cors = require('cors')
 connectToMongo() 
 
 const app = express()
-const port = 8080
+const port = 5000
 
 app.use(express.json())
-const corsOptions = {
-    origin: 'https://cloudquill.vercel.app', 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-    allowedHeaders: ['Content-Type', 'auth-token'],
-    credentials: true
-  };
-app.use(cors(corsOptions));
+app.use(cors());
 
 
 //Available Routes

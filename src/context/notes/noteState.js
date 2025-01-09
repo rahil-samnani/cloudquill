@@ -5,6 +5,7 @@ const NoteState = (props) => {
 
     const host = "https://cloudquill.vercel.app"
     const [notes,setNotes] = useState([])
+    const [mode, setMode] = useState('light')
 
 
     //Fetch all notes
@@ -65,7 +66,7 @@ const NoteState = (props) => {
     }
 
     return (
-        <NoteContext.Provider value={{ notes , setNotes , addNote , deleteNote , editNote, getNotes}}>
+        <NoteContext.Provider value={{ notes , setNotes , addNote , deleteNote , editNote, getNotes , mode , setMode}}>
             {props.children}
         </NoteContext.Provider>
     )
