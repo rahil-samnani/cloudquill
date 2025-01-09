@@ -57,15 +57,12 @@ export default function About() {
                   <div className="about_icon">
                     <i className="fab fa-angellist"></i>
                   </div>
-                  <h5 className="text-dark text-capitalize mt-3 font-weight-bold">Increases Productivity</h5>
-                  <p className="edu_desc mb-0 mt-3 text-muted">As a cloud-based app, CloudQuill ensures your notes are securely stored and accessible from any location. </p>
                   <h5 className="text-capitalize mt-3 font-weight-bold" style={{color:`${mode==="light"?"#000":"#fff"}`}}>Increases Productivity</h5>
-                  <p className="edu_desc mb-0 mt-3" style={{color:`${mode==="light"?"#000":"#fff"}`}}>As a cloud-based app, CloudQuill ensures your notes are securely stored and accessible from any location. </p>
-                  <h5 className="text-dark text-capitalize mt-3 font-weight-bold">Increases Productivity</h5>
-                  <p className="edu_desc mb-0 mt-3 text-muted">CloudQuill increases productivity by streamlining note-taking and ensuring seamless access across devices.</p>
+                  <p className="edu_desc mb-0 mt-3" style={{color:`${mode==="light"?"#000":"#fff"}`}}>CloudQuill increases productivity by streamlining note-taking and ensuring seamless access across devices. </p>
                 </div>
               </div>
             </div>
+
 
             <div className="col-lg-4">
               <div className="about_content_box_all mt-3">
@@ -73,12 +70,8 @@ export default function About() {
                   <div className="about_icon">
                     <i className="fas fa-paper-plane"></i>
                   </div>
-                  <h5 className="text-dark text-capitalize mt-3 font-weight-bold">Cloud Based </h5>
-                  <p className="edu_desc mb-0 mt-3 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                   <h5 className="text-capitalize mt-3 font-weight-bold" style={{color:`${mode==="light"?"#000":"#fff"}`}}>Cloud Based </h5>
-                  <p className="edu_desc mb-0 mt-3" style={{color:`${mode==="light"?"#000":"#fff"}`}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                  <h5 className="text-dark text-capitalize mt-3 font-weight-bold">Cloud Based </h5>
-                  <p className="edu_desc mb-0 mt-3 text-muted">As a cloud-based app, CloudQuill ensures your notes are securely stored and accessible from any location. </p>
+                  <p className="edu_desc mb-0 mt-3" style={{color:`${mode==="light"?"#000":"#fff"}`}}>As a cloud-based app, CloudQuill ensures your notes are securely stored and accessible from any location.  </p>
                 </div>
               </div>
             </div>
