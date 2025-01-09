@@ -1,36 +1,12 @@
 {
     "version":2,
     "builds": [
-      { "src": "index.js", "use": "@vercel/node" }
+      { "src": "*.js", "use": "@vercel/node" }
     ],
     "routes": [
-      {
-        "src": "/api/auth/login",
-        "dest": "/routes/auth.js"
-      },
-      {
-        "src": "/api/auth/createuser",
-        "dest": "/routes/auth.js"
-      },
-      {
-        "src": "/api/auth/getuser",
-        "dest": "/routes/auth.js"
-      },
-      {
-        "src": "/api/notes/fetchallnotes",
-        "dest": "/routes/notes.js"
-      },
-      {
-        "src": "/api/notes/deletenote/(.*)",
-        "dest": "/routes/notes.js"
-      },
-      {
-        "src": "/api/notes/updatenote/(.*)",
-        "dest": "/routes/notes.js"
-      },
-      {
-        "src": "/api/notes/addnote",
-        "dest": "/routes/notes.js"
-      }
+        {
+          "src": "/(.*)",
+          "dest": "/"
+        }
     ]
   }
