@@ -8,9 +8,7 @@ const app = express()
 const port = 5000
 
 app.use(express.json())
-<<<<<<< HEAD
 app.use(cors());
-=======
 const corsOptions = {
     origin: 'https://cloudquill-siwg.vercel.app', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
@@ -18,7 +16,6 @@ const corsOptions = {
     credentials: true
   };
 app.use(cors(corsOptions));
->>>>>>> 24c201a5c132bb66f8895f68e497563da3d164e4
 
 
 //Available Routes
