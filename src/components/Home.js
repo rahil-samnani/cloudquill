@@ -19,7 +19,10 @@ export default function Home(props) {
   useEffect(() => {
     if(localStorage.getItem('token') !== 'null'){
       getNotes()
+<<<<<<< HEAD
       console.log("Token found")
+=======
+>>>>>>> 24c201a5c132bb66f8895f68e497563da3d164e4
     }
     else{
       console.log("Token not found")
@@ -36,7 +39,6 @@ export default function Home(props) {
 
   const handleChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value })
-    console.log(note)
   }
 
   return (
