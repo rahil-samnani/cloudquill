@@ -39,7 +39,7 @@ export default function Signup(props) {
 
     return (
         <div className='d-flex justify-content-center align-items-center' style={{ height: "100vh", width: "100%", backgroundColor: `${mode==="light"?"#F0F1F2":"#171717"}` }}>
-            <div className=" Lflex-r Lcontainer" style={{border: `${mode==="light"?"2px solid #2f2f2f":"2px solid #f0f1f2"}` , borderRadius: "10px"}}>
+            <div className=" Lflex-r Lcontainer border border-3 rounded">
                 <div className="Lflex-r Llogin-wrapper">
                     <div className="Llogin-text" style={{backgroundColor: `${mode==="light"?"#F0F1F2":"#171717"}`}}>
                         <div className="Llogo">
@@ -67,7 +67,7 @@ export default function Signup(props) {
                             </div>
 
                             <div className="Linput-box">
-                                <span cclassName={`Llabel text-${mode==='light'?'dark':'light'}`}>Password</span>
+                                <span className={`Llabel text-${mode==='light'?'dark':'light'}`}>Password</span>
                                 <div className="Lflex-r Linput" style={{backgroundColor: `${mode==="light"?"#F0F1F2":"#2f2f2f"}` }}>
                                     <input minLength={5} required onChange={handleChange} value={credential.password} name='password' className='LLinput' type="password" placeholder="8+ (a, A, 1, #)" style={{backgroundColor: `${mode==="light"?"#F0F1F2":"#2f2f2f"}`, color : `${mode==='light'?"black":"#3DC4E2"}` }}/>
                                     <i style={{color : `${mode==='light'?"black":"#3DC4E2"}`}} className="fas fa-lock"></i>
