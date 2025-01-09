@@ -45,10 +45,10 @@ export default function Login(props) {
     }
 
     return (
-        <div className='d-flex justify-content-center align-items-center' style={{ height: "100vh", width: "100%" ,backgroundColor: `${mode==="light"?"#F0F1F2":"#2f2f2f"}`}}>
+        <div className='d-flex justify-content-center align-items-center' style={{ height: "100vh", width: "100%" ,backgroundColor: `${mode==="light"?"#F0F1F2":"#171717"}`}}>
             <div className=" Lflex-r Lcontainer border border-3 rounded">
                 <div className="Lflex-r Llogin-wrapper  ">
-                    <div className="Llogin-text" style={{backgroundColor: `${mode==="light"?"#F0F1F2":"#2f2f2f"}`}}>
+                    <div className="Llogin-text" style={{backgroundColor: `${mode==="light"?"#F0F1F2":"#171717"}`}}>
                         <div className="Llogo">
                             <span><img src={logo} alt="cloudquill" style={{ width: "50px", height: "50px" }} /></span>
                             <span className={`text-${mode==='light'?'dark':'light'}`}>CloudQuill</span>
