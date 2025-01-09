@@ -19,10 +19,12 @@ export default function Home(props) {
   useEffect(() => {
     if(localStorage.getItem('token') !== 'null'){
       getNotes()
+<<<<<<< HEAD
       console.log("Token found")
+=======
+>>>>>>> 7e38e4a8ba8062a44f6e6c4f01eeb97fe5ec3ebb
     }
     else{
-      console.log("Token not found")
       navigate("/login")
     }
     
