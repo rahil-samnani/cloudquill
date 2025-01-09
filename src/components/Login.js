@@ -10,8 +10,7 @@ export default function Login(props) {
 
     
     const context = useContext(NoteContext)
-    //const { mode } = context
-    const mode = 'dark'
+    const { mode } = context
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
