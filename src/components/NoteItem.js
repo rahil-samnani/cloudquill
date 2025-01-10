@@ -13,7 +13,6 @@ export default function NoteItem(props) {
 
     const handleEdit = () => {
         setNote({ id: note._id, title: note.title, description: note.description, tag: note.tag })
-        console.log(note)
     }
 
     return (
