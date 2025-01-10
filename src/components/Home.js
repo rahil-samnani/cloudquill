@@ -19,7 +19,6 @@ export default function Home(props) {
   useEffect(() => {
     if(localStorage.getItem('token') !== 'null'){
       getNotes()
-      console.log("Token found")
     }
     else{
       navigate("/login")
@@ -35,7 +34,6 @@ export default function Home(props) {
 
   const handleChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value })
-    console.log(note)
   }
 
   return (
