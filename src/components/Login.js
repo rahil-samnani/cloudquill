@@ -34,7 +34,6 @@ export default function Login(props) {
         const json = await response.json()
         if (json.success) {
             localStorage.setItem('token', json.authToken)
-            console.log(localStorage.getItem('token'))
             navigate("/")
             props.showAlert("Login Successful", "success")
         }
