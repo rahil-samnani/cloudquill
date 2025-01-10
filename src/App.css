@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 body::-webkit-scrollbar {
   display: none;
@@ -14,7 +14,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-  font-family: Pangolin ;
+  font-family: Varela Round, Helvetica, Arial, sans-serif ;
   font-size: large;
   height: 100vh;
   width: 100vw;
