@@ -126,8 +126,7 @@ export default function Home(props) {
         ) : (
           Object.entries(groupedNotes).map(([tag, tagNotes]) => (
             <div key={tag} className="my-5">
-              <h5 className={`text-${mode === 'light' ? 'dark' : 'light'}`}>{tag}</h5>
-              <hr class="hr-three"/>
+              <h5 className={`text-${mode === 'light' ? 'dark' : 'light'} my-4`}>{tag}</h5>
               <div className="row my-3">
                 {tagNotes.map((note) => (
                   <NoteItem
@@ -146,7 +145,7 @@ export default function Home(props) {
           to="/createnote"
           style={{ minHeight: '280px', minWidth: '180px' }}
         >
-          <h5 className={`text-${mode === 'light' ? 'dark' : 'light'}`}>Create a note</h5>
+          <h5 className={`text-${mode === 'light' ? 'dark' : 'light'} my-4`}>Create a note</h5>
           <div
             className="create-note card d-flex justify-content-center align-items-center"
             style={{
