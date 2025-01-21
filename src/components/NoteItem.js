@@ -31,7 +31,7 @@ export default function NoteItem(props) {
                             </div>
                         </div>
                         <hr className='hr-note' />
-                        <p className={`card-text text-${mode === 'light' ? 'dark' : 'light'}`}>{note.description}</p>
+                        <p className={`card-text text-${mode === 'light' ? 'dark' : 'light'}` style={{ whiteSpace: 'pre-wrap' }}}>{note.description}</p>
                     </div>
             </div>
         </div>
