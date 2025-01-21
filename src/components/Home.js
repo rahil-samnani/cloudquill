@@ -117,7 +117,7 @@ export default function Home(props) {
       <div>
         <h2 className={`m-3 my-4 text-${mode === 'light' ? 'dark' : 'light'}`}>Your Notes</h2>
         {Object.keys(groupedNotes).length === 0 ? (
-          <div className="container no-notes">
+          <div className="container no-notes my-5">
             <h4>No Notes to display</h4>
             <h6>
               To add notes click <Link to="/createnote">here.</Link>
@@ -125,7 +125,7 @@ export default function Home(props) {
           </div>
         ) : (
           Object.entries(groupedNotes).map(([tag, tagNotes]) => (
-            <div key={tag}>
+            <div key={tag} className="my-5">
               <h5 className={`text-${mode === 'light' ? 'dark' : 'light'}`}>{tag}</h5>
               <hr class="hr-three"/>
               <div className="row my-3">
@@ -146,10 +146,11 @@ export default function Home(props) {
           to="/createnote"
           style={{ minHeight: '280px', minWidth: '180px' }}
         >
+          <h5 className={`text-${mode === 'light' ? 'dark' : 'light'}`}>Create a note</h5>
           <div
             className="create-note card d-flex justify-content-center align-items-center"
             style={{
-              height: '280px',
+              height: '280px', width : '308px' ,
               backgroundColor: `${mode === 'light' ? '#F0F1F2' : '#3f3f3f'}`,
             }}
           >
