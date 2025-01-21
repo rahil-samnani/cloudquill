@@ -126,7 +126,8 @@ export default function Home(props) {
         ) : (
           Object.entries(groupedNotes).map(([tag, tagNotes]) => (
             <div key={tag}>
-              <h3 className={`text-${mode === 'light' ? 'dark' : 'light'}`}>{tag}</h3>
+              <h5 className={`text-${mode === 'light' ? 'dark' : 'light'}`}>{tag}</h5>
+              <hr class="hr-three"/>
               <div className="row my-3">
                 {tagNotes.map((note) => (
                   <NoteItem
